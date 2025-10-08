@@ -18,6 +18,17 @@ app.use(
     credentials: true,
   })
 );
+app.get("/online", (req, res) => {
+  try {
+    res.status(200).json({
+      msg: "backend is live",
+    });
+  } catch (error) {
+    res.status(400).json({
+      msg: error.message,
+    });
+  }
+});
 app.use("/api", authRoutes);
 app.use("/api", itemRoutes);
 app.use("/api", transRoutes);
