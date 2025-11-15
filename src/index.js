@@ -14,7 +14,7 @@ dotenv.config();
               
 app.use(
   cors({
-    origin: "https://greenkarmaui.vercel.app",
+    origin: "https://greenkarmax.vercel.app",
     credentials: true,
   })
 );
